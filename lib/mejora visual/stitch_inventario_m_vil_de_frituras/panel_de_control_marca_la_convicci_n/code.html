@@ -1,0 +1,215 @@
+<!DOCTYPE html><html class="light" lang="es" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#fff8f5",
+                        "secondary": "#8c4f00",
+                        "on-tertiary-container": "#723200",
+                        "surface-container-high": "#ffe3d3",
+                        "surface-container-low": "#fff1ea",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#6b3b00",
+                        "tertiary-fixed-dim": "#ffb68c",
+                        "primary": "#7c5800",
+                        "surface-dim": "#f5d3c0",
+                        "on-tertiary-fixed": "#321200",
+                        "surface": "#fff8f5",
+                        "on-secondary": "#ffffff",
+                        "surface-container": "#ffeadf",
+                        "secondary-fixed-dim": "#ffb874",
+                        "on-background": "#29170c",
+                        "inverse-on-surface": "#ffede4",
+                        "background": "#fff8f5",
+                        "tertiary-container": "#f89c64",
+                        "on-secondary-fixed": "#2d1600",
+                        "surface-tint": "#7c5800",
+                        "secondary-container": "#fd9d33",
+                        "tertiary": "#934b19",
+                        "primary-fixed-dim": "#fcbb2f",
+                        "surface-variant": "#fedcc8",
+                        "outline": "#827561",
+                        "on-tertiary-fixed-variant": "#753401",
+                        "on-error-container": "#93000a",
+                        "outline-variant": "#d4c4ad",
+                        "on-primary-container": "#5c4000",
+                        "secondary-fixed": "#ffdcbf",
+                        "on-primary-fixed-variant": "#5e4200",
+                        "primary-fixed": "#ffdea7",
+                        "on-surface-variant": "#504534",
+                        "primary-container": "#e6a817",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#29170c",
+                        "tertiary-fixed": "#ffdbc9",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "inverse-primary": "#fcbb2f",
+                        "inverse-surface": "#402c1f",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-highest": "#fedcc8",
+                        "on-secondary-container": "#693a00",
+                        "on-primary-fixed": "#271900",
+                        "brand-primary": "#E6A817",
+                        "brand-dark-amber": "#5c4000"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-sm": "0.5rem",
+                        "stack-lg": "1.5rem",
+                        "margin-mobile": "1.25rem",
+                        "stack-md": "1rem",
+                        "inset-squish": "0.75rem 1.25rem",
+                        "gutter-mobile": "1rem"
+                    },
+                    "fontFamily": {
+                        "label-lg": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "headline-sm": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["26px", {"lineHeight": "34px", "fontWeight": "700"}],
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.5px", "fontWeight": "500"}],
+                        "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "headline-lg": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .action-card {
+            background: linear-gradient(135deg, #E6A817 0%, #B88612 100%);
+            overflow: hidden;
+            position: relative;
+        }
+        .card-watermark {
+            position: absolute;
+            right: -10%;
+            bottom: -15%;
+            font-size: 160px;
+            opacity: 0.12;
+            pointer-events: none;
+            color: #29170c;
+            transform: rotate(-10deg);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen relative overflow-x-hidden">
+<!-- Full-screen immersive background -->
+<div class="fixed inset-0 z-0 overflow-hidden">
+<img alt="Artisanal kitchen background" class="w-full h-full object-cover scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7foS6KrYamDEixfpz3KbAy3LAkPtaZpNWdBPtt8eHC67wcQvVFi82lQyP8h33Vko7nPrW-1L7Vb-nIN9qDJ6qhsIQZ16J7PaaQz6FlUOZ374DB7Ppdxrjn-HBEmTNBzqn8Xz2_X_v57hQIYHgKM711lJ_f_Gbcxij4EycTzMw2UJjyuxIPaBzEBYL_UYHOnB5pPu35qni4Gafvs_14dxcAlwHGOgtUzSqG7ouV25fMwKjV8IiJLm7Nw5jRKUJMDpOHKzQ_EGH24JW">
+<!-- Overlay to ensure text legibility -->
+<div class="absolute inset-0 bg-gradient-to-b from-surface/70 via-surface/40 to-surface/90"></div>
+</div>
+<!-- TopAppBar -->
+<header class="fixed top-0 z-50 w-full flex justify-between items-center px-margin-mobile h-16 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md shadow-sm">
+<div class="flex items-center gap-stack-md">
+<div class="flex flex-col">
+<span class="font-headline-sm text-primary font-bold tracking-tight">La Convicción</span>
+<span class="text-[10px] uppercase tracking-widest text-secondary font-bold -mt-1">Control Reparto</span>
+</div>
+</div>
+<div class="flex items-center">
+<button class="flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary hover:bg-primary/20 transition-all rounded-full active:scale-95 group">
+<span class="font-label-lg">Cerrar sesion</span>
+<span class="material-symbols-outlined text-[20px]">logout</span>
+</button>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="relative z-10 pt-24 pb-32 px-margin-mobile max-w-lg mx-auto min-h-screen flex flex-col">
+<!-- Welcome Section -->
+<section class="mb-stack-lg animate-in fade-in slide-in-from-bottom-4 duration-700"><div class="flex items-center gap-4">
+  <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAf6xjbwRxbe0snGIsmWD1lvd3akNuDVHa9hRXpbvLkwl1gvzkMMcxZJkdGUvbrZvVPsL3NPFIEtpeX-fLU2BLz4Pok_1piJiivtQaN5unX4C4KxsB7Yb_g8f1FvGm8cHF6-b-ASWc7pLHr7eimqvLzMH7KUxQvULnQmwXg91vPTYFhQ9AaRvkuhDuaB32QyG1vuOVXtx6kpBKi3ue_lXYS5Xu1qO9C2bMczh4_vns-ZzWfSvcwD2GD831fAwsaEAXgZx09N7vyRiv" alt="Avatar de usuario" class="w-14 h-14 object-cover rounded-none">
+  <div class="flex flex-col">
+    <h1 class="font-headline-lg-mobile text-on-surface mb-0">¡Hola, TempUser!</h1>
+    <p class="font-body-lg text-on-surface-variant opacity-90">¿Qué deseas gestionar hoy?</p>
+  </div>
+</div></section>
+<!-- Vertical Stack Actions -->
+<div class="grid gap-stack-md flex-grow content-start grid-cols-1">
+<!-- Productos Card -->
+<button class="action-card p-6 rounded-2xl flex items-center gap-6 transition-all hover:brightness-105 active:scale-[0.98] text-left shadow-xl border border-white/10">
+<div class="relative z-10 w-14 h-14 rounded-xl bg-on-surface/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface text-3xl" style="font-variation-settings: 'FILL' 1;">bar_chart</span>
+</div>
+<div class="relative z-10 flex flex-col">
+<span class="font-headline-sm text-on-surface">Reportes</span>
+<span class="text-on-surface/70 text-sm font-medium">Realiza el inventario diario y gestiona los reportes de stock</span>
+</div>
+<span class="material-symbols-outlined card-watermark">bar_chart</span>
+</button><button class="action-card p-6 rounded-2xl flex items-center gap-6 transition-all hover:brightness-105 active:scale-[0.98] text-left shadow-xl border border-white/10">
+<div class="relative z-10 w-14 h-14 rounded-xl bg-on-surface/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface text-3xl" style="font-variation-settings: 'FILL' 1;">inventory_2</span>
+</div>
+<div class="relative z-10 flex flex-col">
+<span class="font-headline-sm text-on-surface">Productos</span>
+<span class="text-on-surface/70 text-sm font-medium">Gestionar inventario y catálogo</span>
+</div>
+<span class="material-symbols-outlined card-watermark">inventory_2</span>
+</button>
+<!-- Reportes Card -->
+
+<!-- Repartidores Card -->
+<button class="action-card p-6 rounded-2xl flex items-center gap-6 transition-all hover:brightness-105 active:scale-[0.98] text-left shadow-xl border border-white/10">
+<div class="relative z-10 w-14 h-14 rounded-xl bg-on-surface/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface text-3xl" style="font-variation-settings: 'FILL' 1;">local_shipping</span>
+</div>
+<div class="relative z-10 flex flex-col">
+<span class="font-headline-sm text-on-surface">Repartidores</span>
+<span class="text-on-surface/70 text-sm font-medium">Control de rutas y entregas</span>
+</div>
+<span class="material-symbols-outlined card-watermark">local_shipping</span>
+</button>
+<!-- Observadores Card -->
+<button class="action-card p-6 rounded-2xl flex items-center gap-6 transition-all hover:brightness-105 active:scale-[0.98] text-left shadow-xl border border-white/10">
+<div class="relative z-10 w-14 h-14 rounded-xl bg-on-surface/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface text-3xl" style="font-variation-settings: 'FILL' 1;">visibility</span>
+</div>
+<div class="relative z-10 flex flex-col">
+<span class="font-headline-sm text-on-surface">Observadores</span>
+<span class="text-on-surface/70 text-sm font-medium">Monitoreo de actividad externa</span>
+</div>
+<span class="material-symbols-outlined card-watermark">visibility</span>
+</button>
+</div>
+</main>
+<script>
+    // Micro-interaction for active states and feedback
+    document.querySelectorAll('button').forEach(btn => {
+        btn.addEventListener('click', function() {
+            this.classList.add('scale-95');
+            setTimeout(() => this.classList.remove('scale-95'), 150);
+        });
+    });
+</script>
+
+
+
+
+</body></html>
