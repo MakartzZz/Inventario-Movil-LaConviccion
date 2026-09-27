@@ -1,16 +1,36 @@
-# inv_movil_laconviccion
+# Inventario Móvil La Convicción
 
-A new Flutter project.
+Aplicación móvil de **La Convicción** para llevar el control de productos, repartidores y reportes de inventario. Está desarrollada con Flutter y guarda la información localmente en una base de datos SQLite.
 
-## Getting Started
+## Funciones principales
 
-This project is a starting point for a Flutter application.
+- **Productos y categorías:** registrar y organizar productos con su precio y categoría.
+- **Repartidores:** registrar y editar los repartidores asociados a los reportes.
+- **Observadores:** administrar los usuarios que registran inventario e iniciar sesión mediante un PIN de cuatro dígitos.
+- **Reportes de inventario:** crear, consultar, editar y eliminar reportes por fecha, repartidor y observador, con el detalle de los productos registrados.
+- **Exportación:** generar y compartir el resumen de un reporte en PDF.
 
-A few resources to get you started if this is your first Flutter project:
+## Requisitos
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Flutter instalado y configurado para ejecutar aplicaciones móviles.
+- Dart compatible con la versión indicada en `pubspec.yaml` (SDK `^3.10.7`).
+- Un dispositivo o emulador Android o iOS.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Ejecutar el proyecto
+
+Desde la raíz del repositorio:
+
+```bash
+flutter pub get
+flutter run
+```
+
+Para ejecutar las pruebas disponibles:
+
+```bash
+flutter test
+```
+
+## Datos
+
+La aplicación crea automáticamente la base de datos SQLite `control_reparto.db` en el dispositivo. Los datos se mantienen en ese dispositivo; esta versión no incluye sincronización en la nube.
